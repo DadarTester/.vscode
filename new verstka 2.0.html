@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Размеры и отступы</title>
+
+<style>   
+ html,body{
+    margin: 0;
+    padding: 0;
+    background-color: #f6f7f9;
+ }
+header {
+height: 100px;
+padding: 0 40px;
+}
+button{
+    padding: 10px 30px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.fixed-container{
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%;
+}
+.first-block{
+    height: 250px;
+}
+.first-block > div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-image: url('../imgp/man.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right center;
+}
+section{
+    padding: 40px;
+}
+.price-info{
+    background-color: #3d52fe;
+    color: white;
+}
+.lightbutton{
+border: 1px solid black;
+background-color:transparent;
+}
+.darkbutton{
+background-color: #3d52fe;
+color: white;
+border: 1px solid #3d52fe;
+}
+.services{
+    display:flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+.services > div{
+    width: 200px;
+}
+.services img {
+    width: 150px;
+}
+footer{
+    height: 40px;
+    padding: 40px;
+}
+header > div {
+    display: flex;
+     justify-content: space-between;
+     align-items: center;
+}
+.popup-container{
+    background-color:#000000c2;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+.popup{
+    background-color: white;
+    width: 300px;
+    height: 300px;
+    padding: 30px;
+    border-radius: 5px;
+}
+</style>
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+            var container= document.querySelector('.popup-container');
+            var popupButtons= document.querySelectorAll('.open-popup');
+            for(let i=0; i < popupButtons.length; i++){
+                popupButtons[i].addEventListener('click', function(){
+                        container.style.display='flex';
+                });
+            }
+    });
+</script>
+</head>
+<body>
+    <div class="popup-container">
+<form class="popup"></form>
+    </div>
+<header>
+    <div class="fixed-container">
+        <div><a href="#">Услуги</a>
+    <a href="#">Портфолио</a>
+    <a href="#">Стоимость</a>
+    </div>
+    <div>
+    <span> +7 953 137-44-38</span>
+    <button class="lightbutton open-popup">Заказать звонок</button>
+    </div>
+</div>
+</header>
+<section class="first-block">
+    <div class="fixed-container">
+    <h1>Кирилл Чиннов</h1>
+    <P>QA-engineer и веб-верстальщик</P>
+    <button class="darkbutton open-popup">Узнать больше</button>
+</div>
+</section>
+<section>
+    <div class="fixed-container">
+    <h2>Что я делаю</h2>
+            <div class="services">
+            <div>
+                <img src="../img/1.png" alt="">
+            Верстка лэндинг-страниц и сайтов любой сложности
+            </div>
+            <div>
+                <img src="../img/2.png" alt="">
+                Адаптивная верстка под все браузеры и устройства
+            </div>
+            <div> 
+                <img src="../img/3.png" alt="">
+                Frontend-разработка и программирование
+            </div>
+            <div>
+                <img src="../img/4.png" alt="">
+                Исправление и доработка существующей верстки
+            </div>
+            </div>
+            <button class="lightbutton open-popup">Узнать стоимость</button>
+    </div>
+</div>
+</section>
+<section>
+    <div class="fixed-container">
+    <h2>Примеры работ</h2>
+</div>
+</section>
+<section class="price-info">
+    <div class="fixed-container">
+    <h2>Адаптивная вёрстка под все устройства и браузеры от 1000 р. всего за 4 часа
+        *</h2>
+    </div>
+</section>
+<footer>
+    <div class="fixed-container">
+    <a href="#">Услуги</a>
+    <a href="#">Портфолио</a>
+    <a href="#">Стоимость</a>
+</div>
+</footer>
+</body>
+</html>
