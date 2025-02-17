@@ -1,0 +1,265 @@
+{
+	"info": {
+		"_postman_id": "330792dd-6659-4fab-a7be-8af64ffa6338",
+		"name": "bank rage",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40799991"
+	},
+	"item": [
+		{
+			"name": "регистрация жертвы",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"username\": \"Doomguy\",\r\n\"secret\": \"Notyourday1\",\r\n\"email\": \"Notyourday1@gmail.com\"\r\n}\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api-qa.skillbox.ru/api/loans/v1/register",
+					"protocol": "https",
+					"host": [
+						"api-qa",
+						"skillbox",
+						"ru"
+					],
+					"path": [
+						"api",
+						"loans",
+						"v1",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "логин жертвы",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"username\": \"Doomguy\",\r\n\"secret\": \"Notyourday1\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api-qa.skillbox.ru/api/loans/v1/login",
+					"protocol": "https",
+					"host": [
+						"api-qa",
+						"skillbox",
+						"ru"
+					],
+					"path": [
+						"api",
+						"loans",
+						"v1",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Регистрация Хакера",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"username\": \"IceCube\",\r\n\"secret\": \"OnlyMoney\",\r\n\"email\": \"OnlyMoney@gmail.com\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api-qa.skillbox.ru/api/loans/v1/register",
+					"protocol": "https",
+					"host": [
+						"api-qa",
+						"skillbox",
+						"ru"
+					],
+					"path": [
+						"api",
+						"loans",
+						"v1",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Логин Хакера",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"username\": \"IceCube\",\r\n\"secret\": \"OnlyMoney\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api-qa.skillbox.ru/api/loans/v1/login",
+					"protocol": "https",
+					"host": [
+						"api-qa",
+						"skillbox",
+						"ru"
+					],
+					"path": [
+						"api",
+						"loans",
+						"v1",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "создание организации жертвы",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "2d7f5b7a234454e6144ace45daeeaa9d78caf181",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"orgname\": \"BadName\",\r\n\"address\": \"Pushkina street, h17\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api-qa.skillbox.ru/api/loans/v1/organizations",
+					"protocol": "https",
+					"host": [
+						"api-qa",
+						"skillbox",
+						"ru"
+					],
+					"path": [
+						"api",
+						"loans",
+						"v1",
+						"organizations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Заявка на кредит Жертва",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "2d7f5b7a234454e6144ace45daeeaa9d78caf181",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"orgId\": 4,\r\n\"amount\": \"3500000\",\r\n\"currency\": \"RUB\",\r\n\"fullname\": \"Mind Destruction Olegovich\",\r\n\"passportinfo\": \"3316 4488 Vydan otdelom MVD po gorodu Kirov v raione fantomas 341-5566\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api-qa.skillbox.ru/api/loans/v1/applications",
+					"protocol": "https",
+					"host": [
+						"api-qa",
+						"skillbox",
+						"ru"
+					],
+					"path": [
+						"api",
+						"loans",
+						"v1",
+						"applications"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "просмотр заявки на кредит у жертвы",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "77d51455282bc10251741ae6081c90a04453c7de",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://api-qa.skillbox.ru/api/loans/v1/applications/2",
+					"protocol": "https",
+					"host": [
+						"api-qa",
+						"skillbox",
+						"ru"
+					],
+					"path": [
+						"api",
+						"loans",
+						"v1",
+						"applications",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
