@@ -1,0 +1,147 @@
+{
+	"info": {
+		"_postman_id": "2af19295-b6bd-48d7-b5d1-ba3bdcdf0d91",
+		"name": "Практическая работа номер3",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40799991"
+	},
+	"item": [
+		{
+			"name": "Создание клиента №7",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "skillbox-test",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "skillbox-test",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \r\n\"itemsOfClients\": \r\n[ \r\n{ \r\n\"id\": \"4\", \r\n\"person\": {\r\n\"name\": \"Гавриил\", \r\n\"surname\": \"Корюшков\", \r\n\"patronymic\":\"Никитич\", \r\n\"dateOfBirth\": \"08.06.2004\", \r\n\"location\": \"Словакия\" \r\n    } \r\n            } \r\n] \r\n} \r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api-qa.skillbox.ru/practice3/api/users/create",
+					"protocol": "https",
+					"host": [
+						"api-qa",
+						"skillbox",
+						"ru"
+					],
+					"path": [
+						"practice3",
+						"api",
+						"users",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Получение списка клиентов",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "skillbox-test",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "skillbox-test",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api-qa.skillbox.ru/practice3/api/users",
+					"protocol": "https",
+					"host": [
+						"api-qa",
+						"skillbox",
+						"ru"
+					],
+					"path": [
+						"practice3",
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "исправление пользователя №1",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "https://api-qa.skillbox.ru/practice3/api/users/update",
+					"protocol": "https",
+					"host": [
+						"api-qa",
+						"skillbox",
+						"ru"
+					],
+					"path": [
+						"practice3",
+						"api",
+						"users",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete user №1",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://api-qa.skillbox.ru/practice3/api/users/1/delete",
+					"protocol": "https",
+					"host": [
+						"api-qa",
+						"skillbox",
+						"ru"
+					],
+					"path": [
+						"practice3",
+						"api",
+						"users",
+						"1",
+						"delete"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
